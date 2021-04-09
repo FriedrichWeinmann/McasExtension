@@ -1,0 +1,22 @@
+﻿
+# ignore the settings folder and files for VSCode and PSS
+.vscode/*
+*.psproj
+*TempPoint*
+
+# Ignore staging info from Visual Studio
+library/McasExtension/.vs/*
+library/McasExtension/McasExtension/bin/*
+library/McasExtension/McasExtension/obj/*
+
+# ignore PowerShell Studio MetaData
+McasExtension/McasExtension.psproj
+McasExtension/McasExtension.psproj.bak
+McasExtension/McasExtension.psprojs
+McasExtension/McasExtension.psproj
+
+# ignore the TestResults
+TestResults/*
+
+# ignore the publishing Directory
+publish/*

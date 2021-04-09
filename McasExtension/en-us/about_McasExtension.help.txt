@@ -1,0 +1,11 @@
+﻿TOPIC
+	about_McasExtension
+	
+SHORT DESCRIPTION
+	Explains how to use the McasExtension powershell module
+	
+LONG DESCRIPTION
+	<Insert Content here>
+
+KEYWORDS
+	McasExtension
