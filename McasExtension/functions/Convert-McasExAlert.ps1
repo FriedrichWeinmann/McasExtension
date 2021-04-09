@@ -1,4 +1,22 @@
 ﻿function Convert-McasExAlert {
+<#
+	.SYNOPSIS
+		Converts / Processes an alert object for greater convenience.
+	
+	.DESCRIPTION
+		Converts / Processes an alert object for greater convenience.
+		Expects the output of Get-MCASAlert or Get-McasExAlert.
+	
+		Resolves timestamps, flattens out the data structure and resolves files if present.
+	
+	.PARAMETER Alert
+		The alert object to process.
+	
+	.EXAMPLE
+		PS C:\> Get-McasExAlert -Limit '-2d' | Convert-McasExAlert
+	
+		Retrieve the alerts of the last two days and convert them into something readable.
+#>
 	[CmdletBinding()]
 	param (
 		[Parameter(ValueFromPipeline = $true)]
