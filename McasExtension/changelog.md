@@ -1,5 +1,9 @@
 ﻿# Changelog
+
+## 1.0.1 (2021-06-14)
+
++ Fix: Convert-McasExAlert - failes processing if malformed timestamps are associated with file details.
+
 ## 1.0.0 (2021-03-31)
- - New: Some Stuff
- - Upd: Moar Stuff
- - Fix: Much Stuff
+
++ Intial Release

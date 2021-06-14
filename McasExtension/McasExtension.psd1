@@ -3,7 +3,7 @@
 	RootModule = 'McasExtension.psm1'
 	
 	# Version number of this module.
-	ModuleVersion = '1.0.0'
+	ModuleVersion = '1.0.1'
 	
 	# ID used to uniquely identify this module
 	GUID = '85e85cde-db6c-448a-9837-bb46387c927d'
@@ -21,12 +21,12 @@
 	Description = 'Additional tools for interacting with Microsoft CloudApp Security built on top of the MCAS module'
 	
 	# Minimum version of the Windows PowerShell engine required by this module
-	PowerShellVersion = '5.0'
+	PowerShellVersion = '5.1'
 	
 	# Modules that must be imported into the global environment prior to importing
 	# this module
 	RequiredModules = @(
-		@{ ModuleName = 'PSFramework'; ModuleVersion = '1.6.197' }
+		@{ ModuleName = 'PSFramework'; ModuleVersion = '1.6.201' }
 		@{ ModuleName = 'MCAS'; ModuleVersion = '3.3.8' }
 	)
 	
@@ -53,13 +53,13 @@
 		PSData = @{
 			
 			# Tags applied to this module. These help with module discovery in online galleries.
-			# Tags = @()
+			Tags = @('Mcas')
 			
 			# A URL to the license for this module.
-			# LicenseUri = ''
+			LicenseUri = 'https://github.com/FriedrichWeinmann/McasExtension/blob/master/LICENSE'
 			
 			# A URL to the main website for this project.
-			# ProjectUri = ''
+			ProjectUri = 'https://github.com/FriedrichWeinmann/McasExtension'
 			
 			# A URL to an icon representing this module.
 			# IconUri = ''

@@ -25,7 +25,7 @@
 	
 	process {
 		foreach ($alertObject in $Alert) {
-			$app = ($alertObject.entities | Where-Object type -eq 'service').label
+			# $app = ($alertObject.entities | Where-Object type -eq 'service').label
 			$file = ($alertObject.entities | Where-Object type -eq 'file').id
 			
 			$fileDetails = $null
@@ -58,8 +58,18 @@
 				FileName   = $fileDetails.name
 				FilePath   = $fileDetails.alternateLink
 				FileOwner  = $fileDetails.ownerAddress
-				FileCreatedDate = $(if ($file) { ConvertFrom-MCASTimestamp $fileDetails.createdDate })
-				FileModifiedDate = $(if ($file) { ConvertFrom-MCASTimestamp $fileDetails.modifiedDate })
+				FileCreatedDate = $(
+                    if ($fileDetails.createdDate) {
+                        try { ConvertFrom-MCASTimestamp $fileDetails.createdDate -ErrorAction Stop }
+                        catch { $fileDetails.createdDate }
+                    }
+                )
+				FileModifiedDate = $(
+                    if ($fileDetails.modifiedDate) {
+                        try { ConvertFrom-MCASTimestamp $fileDetails.modifiedDate -ErrorAction Stop }
+                        catch { $fileDetails.modifiedDate }
+                    }
+                )
 				FileStatus = $(if ($file) { $fileDetails.fileStatus[1] })
 				FileAccessLevel = $(if ($file) { $fileDetails.fileAccessLevel[1] })
 			}
