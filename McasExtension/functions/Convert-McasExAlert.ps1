@@ -25,7 +25,7 @@
 	
 	process {
 		foreach ($alertObject in $Alert) {
-			$app = ($alertObject.entities | Where-Object type -eq 'service').label
+			# $app = ($alertObject.entities | Where-Object type -eq 'service').label
 			$file = ($alertObject.entities | Where-Object type -eq 'file').id
 			
 			$fileDetails = $null
